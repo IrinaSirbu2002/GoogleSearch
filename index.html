@@ -7,11 +7,19 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link href="heroes.css" rel="stylesheet">
         <link href="headers.css" rel="stylesheet">
+        <script>
+            function redirectToFirstResult() {
+                const query = document.getElementById('searchInput').value;
+                window.location.href = `https://www.google.com/search?q=${query}&btnI=I%27m+Feeling+Lucky`;
+                return ;  // Prevent the form from actually submitting
+            }
+        </script>
     </head>
     <body>
+
         <div class="container">
             <header class="d-flex flex-wrap py-1 mb-3 border-bottom">
-                <ul class="nav col-md-6 custom-nav">
+                <ul class="nav col-md-4 custom-nav">
                     <li class="nav-item"><a class="nav-link" style="color:black" href="image.html">Google Image Search</a></li>
                     <li class="nav-item"><a class="nav-link" style="color:black" href="advanced.html">Advanced Search</a></li>
                 </ul>
@@ -21,10 +29,13 @@
             <h1 class="display-2 fw-bold text-body-emphasis">MyGoogle</h1>
             <form action="https://www.google.com/search">
                 <div style="margin:20px">
-                    <input class="p-3 rounded-5" style="border: 5px var(--bs-danger-border-subtle) solid" type="text" name="q" placeholder="Type here..">
+                    <input id="searchInput" class="p-3 rounded-5" style="border: 5px var(--bs-danger-border-subtle) solid" type="text" name="q" placeholder="Type here..">
                 </div>
-                <div style="margin:20px">
-                    <input type="submit" value="Google Search">
+                <div class="row" style="margin:20px">
+                    <span class="col-12" >
+                        <input type="submit" value="Google Search"> 
+                        <input name="btnI" type="submit" value="I'm Feeling Lucky" >
+                    </span>
                 </div>
             </form>
         </div>
