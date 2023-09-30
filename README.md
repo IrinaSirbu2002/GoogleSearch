@@ -8,4 +8,6 @@ This was Project 0 of HarvardX's CS50w course, and served as a quick refresher o
 <a href="https://cs50.harvard.edu/web/2020/projects/0/search">
   Full project specification here
 </a>
-
+<a href="https://irinasirbu2002.github.io/GoogleSearch/">
+    Project link here
+</a>
